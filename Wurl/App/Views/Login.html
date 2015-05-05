@@ -1,0 +1,39 @@
+﻿    <!-- Main Login Header -->
+    <div id="main" class="wrapper style1">
+        <div class="container">
+
+            <div class="row 150%">
+                <div class="8u 12u$(medium)">
+
+                    <!--Registration Prompt-->
+                    <section id="content">
+                        <br /><br />
+                        <a href="#/Register" class="image fit"><img src="images/loginOverlay.png" alt="" /></a>
+
+                    </section>
+
+                </div>
+                <div class="4u$ 12u$(medium)">
+
+                    <!-- Sidebar -->
+                    <section id="sidebar">
+                        <section>
+                            <h3>Username</h3>
+                            <input type="text" id="username" ng-model="user.username" placeholder="Username" />
+                            <br />
+                            <h3>Password</h3>
+                            <input type="password" id="password" ng-model="user.password" placeholder="Password" />
+                            <br />
+                            <footer>
+                                <ul class="actions">
+                                    <li><input type="submit" value="Login" class="special" ng-click="login()" /></li>
+                                    <li ng-show="wait">Please wait...</li>
+                                    <li style="color: red" ng-show="userpass">Make sure the username or password is correct</li>
+                                </ul>
+                            </footer>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>

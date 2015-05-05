@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Wurl - The Social Network for Expats</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favico/apple-touch-icon-57x57.png">
+
+    <link rel="apple-touch-icon" sizes="60x60" href="favico/apple-touch-icon-60x60.png">
+
+    <link rel="apple-touch-icon" sizes="72x72" href="favico/apple-touch-icon-72x72.png">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="favico/apple-touch-icon-76x76.png">
+
+    <link rel="apple-touch-icon" sizes="114x114" href="favico/apple-touch-icon-114x114.png">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="favico/apple-touch-icon-120x120.png">
+
+    <link rel="apple-touch-icon" sizes="144x144" href="favico/apple-touch-icon-144x144.png">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="favico/apple-touch-icon-152x152.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon-180x180.png">
+
+    <link rel="icon" type="image/png" href="favico/favicon-32x32.png" sizes="32x32">
+
+    <link rel="icon" type="image/png" href="favico/android-chrome-192x192.png" sizes="192x192">
+
+    <link rel="icon" type="image/png" href="favico/favicon-96x96.png" sizes="96x96">
+
+    <link rel="icon" type="image/png" href="favico/favicon-16x16.png" sizes="16x16">
+
+    <link rel="manifest" href="favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+    <meta name="msapplication-TileImage" content="favico/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <noscript>
+
+
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+
+    </noscript>
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
+<body class="landing">
+    <div ng-controller="HomeController">
+        <!-- Header -->
+        <header id="header" class="skel-layers-fixed" style="background-color: rgba(39,40,51,0.956);">
+            <h1 id="logo">
+                <a>
+                    <img src="images/navheader.png" />
+
+
+
+                </a>
+
+            </h1>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <script type="text/javascript">
+                            var currentTime = new Date()
+                            var hours = currentTime.getHours()
+                            var minutes = currentTime.getMinutes()
+
+                            if (minutes < 10) {
+                                minutes = "0" + minutes
+                            }
+                            var suffix = "AM";
+                            if (hours >= 12) {
+                                suffix = "PM";
+                                hours = hours - 12;
+                            }
+                            if (hours == 0) {
+                                hours = 12;
+                            }
+
+                            document.write(hours + ":" + minutes + " " + suffix)
+
+
+                        </script>
+                    </li>
+
+                    <li ng-show="status.loggedin">
+                        <a>Your Wurl</a>
+                        <ul>
+                            <li><a ng-href="#/Events" ng-click="splash.status = true">View Upcoming Events</a></li>
+                            <li><a ng-href="#/CreateEvent" ng-click="splash.status = true">Create An Event</a></li>
+                        </ul>
+                    </li>
+                    <li ng-show="status.loggedin"><a ng-href="#/" ng-click="splash.status = false">Log out</a></li>
+
+
+
+                    <li ng-show="!status.loggedin"><a ng-href="#/Login" ng-click="signIn(); splash.status = true">Log In</a></li>
+                    <li ng-show="!status.loggedin"><a ng-href="#/Register" ng-click="splash.status = true">Sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Banner -->
+        <div ng-show="!splash.status">
+            <section id="banner" ng-show="!splash.status">
+                <div class="content">
+                    <header>
+                        <h2>Welcome to Wurl</h2>
+                        <p>
+                            Anything to declare? Step onboard Wurl.<br />
+                            The social network for strangers in a strange land.
+                        </p>
+                    </header>
+                    <span class="image"><img src="images/wurlpic01.png" alt="" /></span>
+                </div>
+                <a href="#one" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- One -->
+            <section id="one" class="spotlight style1 bottom" ng-show="!splash.status">
+                <span class="image fit main"><img src="images/sydneypic02.jpg" alt="" /></span>
+                <div class="content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="4u 12u$(medium)">
+                                <header>
+                                    <h2>Are you an Australian in Singapore?</h2>
+                                    <h2>An American in Hong Kong?</h2>
+                                </header>
+                            </div>
+                            <div class="4u 12u$(medium)">
+                                <p>
+                                    Then Wurl is for you. The social network for expatriates, Wurl
+                                    connects you with your surroundings. Find friends, attend local
+                                    events, keep in contact with your local mates, and muse about your
+                                    experiences in your new neighborhood. Wurl will be there to help you
+                                    acclimate.
+                                </p>
+                            </div>
+                            <div class="4u$ 12u$(medium)">
+                                <p>
+                                    Signup only takes a few seconds of your time, and we promise that membership
+                                    in the most inclusive online community of expatriates will be something you absolutely
+                                    cherish. From your computer, your phone, and more: Wurl is there for you.
+                                </p>
+                                <a href="#/Register" class="button">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#two" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- Two -->
+            <section id="two" class="spotlight style2 right" ng-show="!splash.status">
+                <span class="image fit main"><img src="images/passportpic03.2.jpg" alt="" /></span>
+                <div class="content">
+                    <header>
+                        <h2>Bring your passport.</h2>
+                        <h2>We'll stamp it for you.</h2>
+                        <p>Tell us the city that you currently reside in. It's that simple!</p>
+                    </header>
+                    <p>
+                        We'll connect you with like-minded people in your area, keep you updated with
+                        current events in your area and region, and local businesses that offer the goods
+                        and services you want.
+                    </p>
+                </div>
+                <a href="#three" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- Three -->
+            <section id="three" class="spotlight style3 left" ng-show="!splash.status">
+                <span class="image fit main bottom"><img src="images/barcelonapic04.jpg" /></span>
+                <div class="content">
+                    <header>
+                        <h2>Connect across the street, and across borders.</h2>
+                        <p>Stay connected with those around you, around the globe.</p>
+                    </header>
+                    <p>
+                        Across multiple platforms, around the world, in any situation. Wurl is there.
+                        From Bonaire to Barcelona, Sydney to Santiago, and everywhere in between.
+                        We'll keep you in touch with those around you, and beyond.
+                    </p>
+                </div>
+                <a href="#four" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- Four -->
+            <section id="four" class="wrapper style1 special fade-up" ng-show="!splash.status">
+                <div class="container">
+                    <header class="major">
+                        <h2>The Wurl is Your Oyster</h2>
+                        <p>Explore what makes Wurl the premier social network for expatriates and world travelers.</p>
+                    </header>
+                    <div class="box alt">
+                        <div class="row uniform">
+                            <section class="4u 6u(medium) 12u$(xsmall)">
+                                <span class="icon alt major fa-area-chart" href="#/Events"></span>
+                                <h3>Events</h3>
+                                <p>Find local events in your area. Become one with your surroundings. Join the locals and others alike, and <em>carpe diem</em>.</p>
+                            </section>
+                            <section class="4u 6u$(medium) 12u$(xsmall)">
+                                <span class="icon alt major fa-comment"></span>
+                                <h3>Connect</h3>
+                                <p>You're not alone. Wurl connects you with expatriates in your area, creating enclaves of users without isolation from your area.</p>
+                            </section>
+                            <section class="4u$ 6u(medium) 12u$(xsmall)">
+                                <span class="icon alt major fa-flask"></span>
+                                <h3>Commerce and Services (Coming Soon)</h3>
+                                <p>We'll introduce you to local services, goods, and essentials in your area. Never feel inaccessible in your city.</p>
+                            </section>
+                            <section class="4u 6u$(medium) 12u$(xsmall)">
+                                <span class="icon alt major fa-paper-plane"></span>
+                                <h3>Explore your region</h3>
+                                <p>We want our users to become world travelers, that's why we keep you updated not only with your local stories, but regional and abroad.</p>
+                            </section>
+                            <section class="4u 6u(medium) 12u$(xsmall)">
+                                <span class="icon alt major fa-file"></span>
+                                <h3>Tell your story (Coming Soon)</h3>
+                                <p>Share your experience abroad with other users, and even friends and family around the world. We want to hear from you!</p>
+                            </section>
+                            <section class="4u$ 6u$(medium) 12u$(xsmall)">
+                                <span class="icon alt major fa-lock"></span>
+                                <h3>Security</h3>
+                                <p>We take pride in our security. We will never sell your information to anyone. We support onion routing and advocate for your right to speech.</p>
+                            </section>
+                        </div>
+                    </div>
+                    <footer class="major">
+                        <ul class="actions">
+                            <li><a href="#/Register" class="button">Create Your Wurl</a></li>
+                        </ul>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- Five -->
+            <section id="five" class="wrapper style2 special fade" ng-show="!splash.status">
+                <div class="container">
+                    <header>
+                        <h2>Keep updated with Wurl</h2>
+                        <p>There's no obligation to listen to us, but we would love to tell you what's happening.</p>
+                    </header>
+                    <form method="post" action="#" class="container 50%">
+                        <div class="row uniform 50%">
+                            <div class="8u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Your Email Address" /></div>
+                            <div class="4u$ 12u$(xsmall)"><input type="submit" value="Subscribe" class="fit special" /></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+
+        <ul class="copyright">
+            <li>&copy; 2015 Wurl, A Cobra Product. All rights reserved.</li>
+        </ul>
+    </footer>
+
+
+    <script src="js/scripts.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="App/app.js"></script>
+    <script src="App/Services/AuthFactory.js"></script>
+    <script src="App/Services/CoreFactory.js"></script>
+    <script src="App/Controller/HomeController.js"></script>
+    <script src="App/Controller/EventController.js"></script>
+    <script src="App/Controller/EventDetailController.js"></script>
+
+</body>
+</html>

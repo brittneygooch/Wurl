@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Wurl - The Social Network for Expats</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrollex.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script type="text/javascript" src="js/init.js">
+        $(document).ready(function () {
+            init();
+        });
+    </script>
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favico/apple-touch-icon-57x57.png">
+
+    <link rel="apple-touch-icon" sizes="60x60" href="favico/apple-touch-icon-60x60.png">
+
+    <link rel="apple-touch-icon" sizes="72x72" href="favico/apple-touch-icon-72x72.png">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="favico/apple-touch-icon-76x76.png">
+
+    <link rel="apple-touch-icon" sizes="114x114" href="favico/apple-touch-icon-114x114.png">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="favico/apple-touch-icon-120x120.png">
+
+    <link rel="apple-touch-icon" sizes="144x144" href="favico/apple-touch-icon-144x144.png">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="favico/apple-touch-icon-152x152.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon-180x180.png">
+
+    <link rel="icon" type="image/png" href="favico/favicon-32x32.png" sizes="32x32">
+
+    <link rel="icon" type="image/png" href="favico/android-chrome-192x192.png" sizes="192x192">
+
+    <link rel="icon" type="image/png" href="favico/favicon-96x96.png" sizes="96x96">
+
+    <link rel="icon" type="image/png" href="favico/favicon-16x16.png" sizes="16x16">
+
+    <link rel="manifest" href="favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+    <meta name="msapplication-TileImage" content="favico/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
+<body class="landing">
+
+    <!-- Header -->
+    <header id="header" class="skel-layers-fixed" style="background-color: rgba(39,40,51,0.956);" ng-controller="HomeController">
+        <h1 id="logo">
+            <a>
+                <img src="images/navheader.png" />
+
+
+
+            </a>
+
+        </h1>
+        <nav id="nav">
+            <ul>
+                <li>
+                    <script type="text/javascript">
+                        document.write('<span id="date-time">',
+                            new Date().toLocaleString(), '<\/span>')
+                        if (document.getElementById) onload = function () {
+                            setInterval("document.getElementById ('date-time').firstChild.data = new Date().toLocaleString()", 50)
+                        }
+                    </script>
+                    <script type="text/javascript">
+                        var loaded = false;
+                        var time = 10000;
+                        $(function () {
+                              $(window).load(function () {
+                                  loaded = true;
+                          });
+                          setTimeout(function () {
+                              if (!loaded) {
+                                  window.location.reload();
+                          }
+                       }, time);
+                    });
+                    </script>
+                </li>
+                <li ng-show="!status.loggedin"><a href="#/">About Wurl</a></li>
+                <li ng-show="status.loggedin">
+                    <a>Your Wurl</a>
+                    <ul>
+                        <li><a href="#/Events">View Upcoming Events</a></li>
+                        <li><a href="#/CreateEvent">Create An Event</a></li>
+                    </ul>
+                </li>
+                <li ng-show="status.loggedin"><a href="#/" ng-click="logout()">Log out</a></li>
+                <li ng-show="!status.loggedin"><a href="#/Login">Log In</a></li>
+                <li ng-show="!status.loggedin"><a href="#/Register">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <div ng-view autoscroll="true"></div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>&copy; 2015 Wurl, A Cobra Product. All rights reserved.</li>
+        </ul>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="App/app.js"></script>
+    <script src="App/Services/AuthFactory.js"></script>
+    <script src="App/Services/CoreFactory.js"></script>
+    <script src="App/Controller/HomeController.js"></script>
+    <script src="App/Controller/EventController.js"></script>
+    <script src="App/Controller/EventDetailController.js"></script>
+
+</body>
+</html>

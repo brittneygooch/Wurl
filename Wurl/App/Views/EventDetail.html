@@ -1,0 +1,76 @@
+﻿
+<section class="spotlight style1 top">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="4u 12u$(medium)">
+                    <header ng-show="!isEditing">
+                        <img style="max-height:300px; max-width:300px;" src="{{event.thatEvent.imgUrl}}" />
+                        <h2>{{event.thatEvent.title}}</h2>
+                        <h4>{{event.thatEvent.date}} at {{event.thatEvent.time}}</h4>
+                        <h4>{{event.thatEvent.location}}</h4>
+                    </header>
+                </div>
+                <div class="4u 12u$(medium)">
+                    <header ng-show="isEditing">
+                        <img style="max-height:300px; max-width:300px;" src="{{event.thatEvent.imgUrl}}" />
+                        <h2><input type="text" name="event" id="event" value="" placeholder="Event Name" ng-model="Title" /></h2>
+                        <h4><input type="text" name="datetime" id="event" value="" placeholder="Date" ng-model="Date" /> at <input type="text" name="datetime" id="event" value="" placeholder="Time (hh:mm am/pm)" ng-model="Time" /></h4>
+                        <h4><input type="text" name="location" id="city" value="" placeholder="Location" ng-model="Location" /></h4>
+                    </header>
+                </div>
+                <div class="4u 12u$(medium)" ng-show="!isEditing">
+                    <header>
+                        {{event.thatEvent.description}} 
+                        <ul class="actions">
+                            <li><input type="submit" value="Edit" class="special" ng-click="editEvent(event.thatEvent.eventId)" ng-show="event.thatEvent.userId == user.userId"></li>
+                            <li><input type="submit" value="Delete" class="special" ng-click="deleteEvent(event.thatEvent.eventId)" ng-show="event.thatEvent.userId == user.userId"></li>
+                        </ul>
+                    </header>
+                </div>
+                <div class="4u 12u$(medium)" ng-show="isEditing">
+                    <header>
+                        <textarea rows="8" name="description" id="description" placeholder="Description" ng-model="Description"></textarea>
+                        <ul class="actions">
+                            <li><input type="submit" value="Update" class="special" ng-click="updateEvent()" ng-show="event.thatEvent.userId == user.userId"></li>
+                        </ul>
+                    </header>
+                </div>
+
+                <div class="4u 12u$(medium)" id="disqus_thread"></div>
+                <script type="text/javascript">
+                        /* * * CONFIGURATION VARIABLES * * */
+                        var disqus_shortname = 'Wurl';
+                        var mystring = window.location.href.split('#'); 
+                        var disqus_identifier = mystring[1];
+                        var newstring = window.location.href;
+                        var disqus_url = newstring;
+
+
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function () {
+                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'Wurl';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>

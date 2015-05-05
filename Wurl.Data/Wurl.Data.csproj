@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{300BDBCE-9B6E-410A-A635-CFAA3C620529}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wurl.Data</RootNamespace>
+    <AssemblyName>Wurl.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201504142002321_initCommit3.cs" />
+    <Compile Include="Migrations\201504142002321_initCommit3.Designer.cs">
+      <DependentUpon>201504142002321_initCommit3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504161718097_superduperCOmmit.cs" />
+    <Compile Include="Migrations\201504161718097_superduperCOmmit.Designer.cs">
+      <DependentUpon>201504161718097_superduperCOmmit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504170214349_anotherCommit.cs" />
+    <Compile Include="Migrations\201504170214349_anotherCommit.Designer.cs">
+      <DependentUpon>201504170214349_anotherCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504170232072_someStuff.cs" />
+    <Compile Include="Migrations\201504170232072_someStuff.Designer.cs">
+      <DependentUpon>201504170232072_someStuff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504170359481_stuffffffff.cs" />
+    <Compile Include="Migrations\201504170359481_stuffffffff.Designer.cs">
+      <DependentUpon>201504170359481_stuffffffff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201504172335386_imagesCommit.cs" />
+    <Compile Include="Migrations\201504172335386_imagesCommit.Designer.cs">
+      <DependentUpon>201504172335386_imagesCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seeder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wurl.Data.Model\Wurl.Data.Model.csproj">
+      <Project>{b03f236e-f7c0-492b-bc80-c08e5bd3fc57}</Project>
+      <Name>Wurl.Data.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201504142002321_initCommit3.resx">
+      <DependentUpon>201504142002321_initCommit3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504161718097_superduperCOmmit.resx">
+      <DependentUpon>201504161718097_superduperCOmmit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504170214349_anotherCommit.resx">
+      <DependentUpon>201504170214349_anotherCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504170232072_someStuff.resx">
+      <DependentUpon>201504170232072_someStuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504170359481_stuffffffff.resx">
+      <DependentUpon>201504170359481_stuffffffff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504172335386_imagesCommit.resx">
+      <DependentUpon>201504172335386_imagesCommit.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

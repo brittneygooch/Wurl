@@ -1,0 +1,120 @@
+﻿<!--<script type="text/javascript">
+    var loaded = false;
+    var time = 5000;
+    $(function () {
+        $(window).load(function () {
+            loaded = true;
+        });
+        setTimeout(function () {
+            if (!loaded) {
+                window.location.reload();
+            }
+        }, time);
+    });
+</script>-->
+
+
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <header class="major">
+            <h2>Create Your Event</h2>
+            <p>Host a party, organize a speaker, rage against the dying of the light--Wurl will help you make it happen.</p>
+        </header>
+        <div class="row 150%">
+            <div class="4u 12u$(medium)">
+                <!--Sidebar-->
+                <section id="sidebar">
+                    <section>
+                        <h3>What are you up to?</h3>
+                        <div>
+                            <input type="text" name="event" id="event" value="" placeholder="Event Name" ng-model="Title" />
+                        </div>
+                        <br />
+                        <div class="select-wrapper">
+                            <select ng-model="url" ng-options="image.title for image in Images" ng-change="change(url)">
+                                <option value="">Type of event</option>
+                            </select>
+                        </div>
+                        <br />
+                        <h3>All right, Where's it gonna be?</h3>
+                        <div>
+                            <input type="text" name="location" id="city" value="" placeholder="Location" ng-model="Location" />
+                        </div>
+                        <br />
+                        <div>
+                            <input type="text" name="city" id="city" value="" placeholder="City" ng-model="City" />
+                        </div>
+                        <br />
+                        <h3>What time?</h3>
+                        <div>
+                            <input type="text" name="datetime" id="event" value="" placeholder="Date" ng-model="Date" />
+                        </div>
+                        <div>
+                            <input type="text" name="datetime" id="event" value="" placeholder="Time (hh:mm am/pm)" ng-model="Time" />
+                        </div>
+                        <br />
+                        <ul class="actions">
+                            <li><input type="submit" value="Create" class="special" ng-click="addNewEvent()" /></li>
+                            <li ng-show="wait">Adding new event...</li>
+                            <li style="color: red" ng-show="pass">Could not be submitted at this time, please try again</li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+            <div class="8u$ 12u$(medium) important(medium)">
+
+                <!-- Content -->
+                <section id="content">
+                    <a href="#" class="image fit"><img src="images/createeventbackground.jpg" alt="" /></a>
+                    <h3>Making an event</h3>
+                    <p>When making an event, think about all the things you want to tell people about it.  Make sure the event name is short but descriptive, make sure the address is understandable to people living in your city.  Make sure the time says whether it's AM or PM, and the date uses mm/dd/yyyy instead of "Today" or "Tomorrow".</p>
+                    <p>Also, make sure the description is fully descriptive of what you're planning.  Let people know how much fun they're going to have!</p>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--<section class="spotlight style3 left">
+    <span class="image fit main bottom"><img src="images/createeventbackground.jpg" /></span>
+    <div class="content">
+
+        <div>
+            <input type="text" name="event" id="event" value="" placeholder="Event Name" ng-model="Title" />
+        </div>
+        <br />
+        <div class="select-wrapper">
+            <select ng-model="url" ng-options="image.title for image in Images" ng-change="change(url)">
+                <option value="">Type of event</option>
+            </select>
+        </div>
+        <br />
+        <div>
+            <input type="text" name="location" id="city" value="" placeholder="Location" ng-model="Location" />
+        </div>
+        <br />
+        <div>
+            <input type="text" name="city" id="city" value="" placeholder="City" ng-model="City" />
+        </div>
+        <br />
+        <div>
+            <input type="text" name="datetime" id="event" value="" placeholder="Date" ng-model="Date" />
+        </div>
+        <div>
+            <input type="text" name="datetime" id="event" value="" placeholder="Time (hh:mm am/pm)" ng-model="Time" />
+        </div>
+        <br />
+        <textarea rows="2" name="description" id="description" value="" placeholder="Description" ng-model="Description"></textarea>
+        <br />
+        <ul class="actions">
+            <li><input type="submit" value="Create" class="special" ng-click="addNewEvent()" /></li>
+            <li ng-show="wait">Adding new event...</li>
+            <li style="color: red" ng-show="pass">Could not be submitted at this time, please try again</li>
+        </ul>
+    </div>
+</section>-->
+
+

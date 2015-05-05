@@ -1,0 +1,107 @@
+﻿
+    <!-- Main -->
+    <div id="main" class="wrapper style1">
+        <div class="container">
+            <header class="major">
+                <h2>Register for Wurl</h2>
+                <p>Connect with fellow expatriates or local citizens, and find events.</p>
+            </header>
+            <div class="row 150%">
+                <div class="4u 12u$(medium)">
+
+                    <!-- Sidebar -->
+                    <section id="sidebar">
+                        <section>
+                            <h3>Tell Us About You</h3>
+                            <div class="12u$">
+                                <input type="text" name="name" id="name" value="" placeholder="Username" ng-model="username">
+                            </div>
+                            <br />
+                            <div class="12u$">
+                                <input type="text" name="name" id="name" value="" placeholder="Email" ng-model="email">
+                            </div>
+                            <br />
+                            <div class="12u$">
+                                <input type="password" name="password" id="password" value="" placeholder="Password" ng-model="password">
+                            </div>
+                            <br />
+                            <div class="12u$">
+                                <input type="password" name="password" id="password" value="" placeholder="Confirm Password" ng-model="confirmPassword">
+                            </div>
+                            <br />
+                            <footer>
+                                <ul class="actions">
+                                    <li><input type="submit" value="Check Username" class="special" ng-click="userCheck()"></li>
+                                    <li ng-show="userWait">Checking to see if this username already exists...</li>
+                                    <li ng-show="userOpen">Username is available</li>
+                                    <li style="color: red" ng-show="userExists">Username already taken</li>
+                                </ul>
+                            </footer>
+                        </section>
+                        <hr />
+                        <section>
+                            <a href="#" class="image fit"></a>
+                            <h3>Where are you now?</h3>
+                            <div class="12u$">
+                                <input type="text" name="text" id="cityofresidence" value="" placeholder="City" ng-model="city">
+                            </div>
+                            <br />
+                            <section>
+                                <div class="select-wrapper">
+                                    <select ng-model="country" ng-options="country.name for country in countries" ng-change="change(country)">
+                                        <option value="">-Select country-</option>
+                                    </select>
+                                </div>
+                            </section>
+
+                            <footer>
+                                <br />
+                                <ul class="actions">
+                                    <li><input type="submit" value="Submit" class="special" ng-click="register()" /></li>
+                                    <li ng-show="wait">Please wait while your account is registered</li>
+                                    <li style="color: red" ng-show="pass">Please ensure passwords match, and be sure the username is not already taken</li>
+                                </ul>
+                            </footer>
+                        </section>
+                    </section>
+
+                </div>
+                <div class="8u$ 12u$(medium) important(medium)">
+
+                    <!-- Content -->
+                    <section id="content">
+                        <a href="#" class="image fit"><img src="images\chinaregisterpic05.jpg" alt="" /></a>
+                        <h3>The Wurl is your Oyster</h3>
+                        <p>
+                            The premier expatriate social network is here for you. We keep you secure, connected, active and outgoing.
+                            From our social events curated from local partners in select markets, to our up-to-date advisory travel
+                            information system (ATIS, coming soon) we are a service FOR EXPATS, BUILT BY EXPATS&copy;.
+                        </p>
+                        <p>
+                            Our service is available everywhere. We never believe in exclusion due to geographical boundaries.
+                            It takes all kinds to make the Wurl go around.
+                        </p>
+                        <h3>Security</h3>
+                        <p>We will never sell your information to third parties, including, but not limited to: </p>
+                        <ul>
+                            <li>Advertisers/Marketers</li>
+                            <li>Non-government organizations</li>
+                            <li>Political parties/governments</li>
+                            <li>Internet Service Providers</li>
+                            <li>The Lizard People</li>
+                            <li>Beyonce Knowles-Carter, and all members of the Beygency</li>
+                        </ul>
+                        <p>
+                            We believe in the universal right to free speech, free travel, and no restrictions in borders. We accept all citizens of the world to join together
+                            in a virtual collective to socialize, influence, and share their wisdom in travel and culture.
+                        </p>
+                        <p>
+                            If, for any reason, you are unsatisfied with our mission--whether it be for our service, our website, or us personally--be sure to contact us at our
+                            <a href="mailto:support@getwurl.com">E-Mail</a> and we will be sure to respond back in a timely fashion.
+                        </p>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </div>

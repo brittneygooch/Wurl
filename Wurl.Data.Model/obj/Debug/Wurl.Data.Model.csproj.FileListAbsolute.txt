@@ -1,0 +1,14 @@
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\Wurl.Data.Model.dll.config
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\Wurl.Data.Model.dll
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\Wurl.Data.Model.pdb
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\EntityFramework.dll
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\EntityFramework.xml
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\obj\Debug\Wurl.Data.Model.csprojResolveAssemblyReference.cache
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\obj\Debug\Wurl.Data.Model.dll
+C:\CodePlex\cobras315\Wurl\Wurl.Data.Model\obj\Debug\Wurl.Data.Model.pdb

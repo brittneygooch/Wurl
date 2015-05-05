@@ -1,0 +1,42 @@
+﻿<!-- Main -->
+<!-- Content -->
+
+
+<div id="main" class="wrapper style1">
+    <div class="container" id="eventchat">
+        <header class="major" ng-show="!changeCity">
+            <h2 style="font-family: Roboto Thin, Arial, sans-serif; font-size: 54px;">Wurl Events</h2>
+            <h4>{{user.city}}</h4>
+            <ul class="actions" ng-show="!changeCity">
+                <li><input type="submit" value="Change city" class="special" ng-click="editCity()" /></li>
+            </ul>
+        </header>
+        <header class="major" ng-show="changeCity">
+            <h2 style="font-family: Roboto Thin, Arial, sans-serif; font-size: 54px;">Wurl Events</h2>
+            <input type="text" name="text" id="city" value="" placeholder="City" ng-model="user.city">
+            <ul class="actions">
+                <li><input type="submit" value="Submit" class="special" ng-click="CityChange()" /></li>
+                <li ng-show="cityWait">Fetching new city events...</li>
+            </ul>
+        </header>
+        <div class="row">
+            <div ng-repeat="event in EventArr.eventsList" ng-init="EventArr.eventsList">
+                <div class="12u 12u$(medium)" style="align-content: center">
+                    <img style="align-content: center; max-height:200px; max-width:200px;" src="{{event.imgUrl}}" />
+                    <div>
+                        <h5 style="text-align:center"><a href="#/Event/{{event.eventId}}" ng-click="getDetail(event.eventId)">{{event.title}}</a></h5>
+                        <h5 style="text-align:center">{{event.date}}</h5>
+                    </div>
+                </div>
+                <hr /><br />
+            </div>
+            <!--<div style="align-content: center">
+                <ul>
+                    <pagination ng-model="cPage" total-items="EventArr.length" items-per-age="5" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+                </ul>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+
